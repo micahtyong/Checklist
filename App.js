@@ -20,6 +20,7 @@ export default function App() {
   // Add entered goal to All Goals 
   function addGoalHandler(enteredGoal) {
     setCourseGoals(currentGoals => [...currentGoals, { key: Math.random().toString(), value: enteredGoal}])
+    setIsAddMode(false); 
   }
 
   // Delete selected goal within All Goals
