@@ -12,6 +12,9 @@ const GoalInput = props => {
 
   // Handler for adding a goal (clear input and dismiss)
   function addGoalHandler() {
+    if (enteredGoal.length === 0) {
+      return;
+    }
     props.onAddGoal(enteredGoal);
     setEnteredGoal("");
   }
